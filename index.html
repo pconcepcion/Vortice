@@ -16,13 +16,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" type="text/css" href="css/base.css"/>
-    <title>Firefox OS Boilerplate App</title>
+    <title>Vórtice</title>
 </head>
 
 <body>
 
     <header>
-        <h1>Firefox OS Boilerplate</h1> 
+        <h1>Vórtice</h1> 
         <div id="install">
             <button>Install</button>
         </div>
@@ -33,46 +33,40 @@
 
     <div id="main">
 
-        <h2>WebActivities</h2>
+        <h2>Crear partida</h2>
 
-        <button id="pick-image">Pick image</button>
-        <div id="image-presenter"></div>
+        <fieldset id="create_game">
+        <div class="field">
+            <label for="game_name">Nombre</label>
+            <input id="game_name" name="game_name" type="text" placeholder="Scarface" required="required" /> 
+        </div>
+        <div class="field">
+            <label for="game_system">Sistema</label>
+            <input id="game_system" name="game_system" type="text" value="Telaraña" readonly="readonly" /> 
+        </div>
+        <div class="field">
+            <label for="game_num_players">Nº Jugadores</label>
+            <input id="game_num_players" name="game_num_players" type="number" min="1" value="2" required="required" /> 
+        </div>
+        <div class="field">
+            <label for="game_description">Descripcion</label>
+            <textarea id="game_description" name="game_description"></textarea>
+        </div>
+        <div class="field">
+            <label for="game_instructions">Instrucciones</label>
+            <textarea id="game_instructions" name="game_instructions" ></textarea>
+        </div>
+        <div class="field">
+            <label for="game_extras">URL Extras</label>
+            <input id="game_extras" name="game_extras" type="url" placeholder="http://vortice.es/scarface" />
+            <div><ul id="game_extra_list"></ul></div>
+            <button id="add_url" onclick="add_url_field()">Add</button>
+        </div>
+        </fieldset>
+        <div class="field">
+            <input id="game_submit" type="submit" value="Guardar" onclick="game_create();" />
+        </div>
 
-        <button id="pick-anything">Pick anything</button>
-
-        <button id="record">Take picture</button>
-
-        <button id="dial">Dial number</button>
-
-        <button id="send-sms">Send SMS</button>
-
-        <button id="add-contact">Add contact</button>
-
-        <button id="share">Share URL</button>
-
-        <button id="share-image">Share Image</button>
-        <img id="image-to-share" src="images/logo64.png" alt="">
-
-        <button id="view-url">View URL</button>
-
-        <button id="compose-email">Compose mail</button>
-
-
-        <h2>WebAPIs</h2>
-
-        <button id="add-notification">Add notification</button>
-
-        <button id="lock-orientation">Orientation lock</button>
-
-        <button id="vibrate">Vibrate 2 sec</button>
-
-        <button id="add-alarm">Add alarm</button>
-
-        <button id="check-connection">Check connection</button>
-        <div id="connection-display"></div>
-
-        <button id="check-battery">Check battery</button>
-        <div id="battery-display"></div>
     </div>
 
     <footer>

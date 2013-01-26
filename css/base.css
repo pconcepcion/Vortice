@@ -178,3 +178,15 @@ footer li:active {
 footer li:last-child {
     border:none;
 }
+
+/* My styles */
+
+textarea, input {
+    float:right;
+}
+
+textarea:after, input:after, div.field {
+    clear:both;
+}
+
+
